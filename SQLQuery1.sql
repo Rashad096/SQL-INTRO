@@ -63,8 +63,7 @@ ALTER TABLE Products
 ALTER COLUMN BrandName nvarchar(20) NOT NULL 
 	
 ALTER TABLE Products
-ADD CHECK(BrandName>2)
-
+ADD CHECK(LEN(BrandName)>2)
 INSERT INTO Products
 	VALUES(16,'Xleb',NULL,50)
 
